@@ -12,6 +12,9 @@ const port=process.env.PORT
 const DATABASE_URL=process.env.DATABASE_URL
 
 //cors
+const corsOptions = {
+  origin: process.env.FRONTEND_ORIGIN,
+}
 app.use(cors())
 
 //database connection
