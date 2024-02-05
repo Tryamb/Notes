@@ -5,7 +5,7 @@ import cors from 'cors'
 import userRoutes from './routes/userRoutes.js'
 import personRoutes from './routes/personRoutes.js'
 import expenseRoutes from './routes/expenseRoutes.js'
-import connectDB from './config/connectDB.js'
+import connectDB from './config/connectDb.js'
 
 const app=express()
 const port=process.env.PORT
