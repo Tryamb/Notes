@@ -6,7 +6,7 @@ import { checkAdminAuth, userAuthentication } from '../middlewares/auth-middlewa
 const router=express.Router()
 
 //protected
-router.post('/create-expense',userAuthentication, ExpressFormidable(),createExpenseController)
+router.post('/create-expense',userAuthentication,createExpenseController)
 router.get('/get-expenses',userAuthentication,getOwnExpensesController)
 router.get('/get-expenses/:pid',checkAdminAuth,getOthersExpensesController)
 // router.post('/delete-expense/:pid',deleteExpenseController)
