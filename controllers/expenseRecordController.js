@@ -39,7 +39,7 @@ export const createExpenseController= async(req,res)=>{
 export const getOthersExpensesController= async(req,res)=>{
         const {pid}=req.params
         try {  
-              let expenses =  await userExpenseModel.find({ userId: req.user._id }).
+              let expenses =  await userExpenseModel.find({ userId: process.env.USER_ID }).
                               select('expenses -_id')
                 const hisExpenses = expenses[0].expenses.filter(expense => expense.person == pid);
                 expenses = Array.from(hisExpenses, expense => {
