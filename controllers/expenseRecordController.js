@@ -6,7 +6,7 @@ export const createExpenseController= async(req,res)=>{
         const userId=req.user._id
         switch(true){
             case !title:
-                return res.status(500).send({error:'Name is Required',})
+                return res.status(500).send({error:'Title is Required',})
             case !amount:
                 return res.status(500).send({error:'Amount is Required',})
         }
