@@ -2,7 +2,7 @@ import userExpenseModel from '../models/expenseRecordModel.js'
 import personModel from '../models/personModel.js';
 export const createExpenseController= async(req,res)=>{
     try {
-        const {timestamp,title,description,amount,person_id}=req.body
+        const {timestamp,title,description,amount,person}=req.body
         const userId=req.user._id
         switch(true){
             case !title:
