@@ -12,7 +12,7 @@ export const createExpenseController= async(req,res)=>{
         }
    
         const expense = {
-            person: person_id,
+            person: person,
             title: title,
             description: description,
             amount: amount,
